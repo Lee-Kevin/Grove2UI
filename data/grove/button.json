@@ -1,0 +1,34 @@
+{
+	"Name" : "Grove Two Dual Button",
+	"VID" : 0x2886,
+	"PID" : 0x0002,
+	
+	"Parameter" : {
+		"Addr" : {
+			"description" : "Device I2C default address",
+			"attribute" : "parameter",
+			"Index" : 0,
+			"Value" : 0x02
+		}
+	},
+	
+	"Mode" : {
+		"Event" : {
+			"description" : "",
+			"attribute" : "event",
+			"index" : 0,
+			"length" : 5,
+			"value" : {
+				"BUTTON_A_CLICK" : 1,
+				"BUTTON_A_DOUBLE_CLICK" : 2,
+				"BUTTON_A_LONG_PRESS" : 3,
+				"BUTTON_B_CLICK" : 4,
+				"BUTTON_B_DOUBLE_CLICK" : 5,
+				"BUTTON_B_LONG_PRESS" : 6,
+				"BUTTON_A_AND_B_CLICK" : 7,
+				"BUTTON_A_AND_B_DOUBLE_CLICK" : 8,
+				"BUTTON_A_AND_B_LONG_PRESS" : 9
+			}
+		}
+	}
+}

@@ -1,0 +1,65 @@
+{
+	"Name" : "Grove Two Sound",
+	"VID" : 0x2886,
+	"PID" : 0x0006,
+
+	"Parameter" : {
+		"Addr" : {
+			"description" : "Device I2C default address",
+			"attribute" : "parameter",
+			"index" : 0,
+			"value" : 0x06
+		},
+		"Threshold 1" : {
+			"description" : "",
+			"attribute" : "parameter",
+			"index" : 1,
+			"value" : 50
+		},
+		"Threshold 2" : {
+			"description" : "",
+			"attribute" : "parameter",
+			"index" : 2,
+			"value" : 200
+		}
+	},
+	
+	"Mode" : [
+		"Event" : {
+			"description" : "",
+			"attribute" : "event",
+			"index" : 0,
+			"length" : 5,
+			"value" : {
+				"T < TH1" : 1,
+				"T >= TH1 && T < TH2" : 2,
+				"T >= TH2" : 3
+			}
+		},
+		
+		"Sound" : {
+			"description" : "",
+			"attribute" : "data",
+			"index" : 1,
+			"value" : [
+				"Direct" : {
+					"index" : 0,
+					"length" : 5,
+					"value" : "none"
+				},
+				"Maping" : {
+					"index" : 1,
+					"length" : 9,
+					"Min" : {
+						"range" : "from 0 to 1024",
+						"value" : 0,
+					},
+					"Max" : {
+						"range" : "from 0 to 1024",
+						"value" : 1024,
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,106 @@
+{
+	"Name" : "Grove Two IMU 9 Dof",
+	"VID" : 0x2886,
+	"PID" : 0x0004,
+	
+	"Parameter" : {
+		"Addr" : {
+			"description" : "Device I2C default address",
+			"attribute" : "parameter",
+			"index" : 0,
+			"value" : 0x04
+		}
+	},
+	
+	"Mode" : [
+		"Event" : {
+			"description" : "",
+			"attribute" : "event",
+			"index" : 0,
+			"length" : 5,
+			"value" : {
+				"IMU_TILT_X_P" : 1,
+				"IMU_TILT_X_N" : 2,
+				"IMU_TILT_Y_P" : 3,
+				"IMU_TILT_Y_N" : 4,
+				"IMU_TILT_Z_P" : 5,
+				"IMU_TILT_Z_N" : 6,
+			}
+		},
+		
+		"Acce_X" : {
+			"description" : "",
+			"attribute" : "data",
+			"index" : 1,
+			"value" : [
+				"Direct" : {
+					"index" : 0,
+					"length" : 5,
+					"value" : null
+				},
+				"Maping" : {
+					"index" : 1,
+					"length" : 9,
+					"Min" : {
+						"range" : "from -2000 to 2000",
+						"value" : -2000,
+					},
+					"Max" : {
+						"range" : "from -2000 to 2000",
+						"value" : 2000,
+					}
+				}
+			]
+		},
+		
+		"Acce_Y" : {
+			"description" : "",
+			"attribute" : "data",
+			"index" : 2,
+			"value" : [
+				"Direct" : {
+					"index" : 0,
+					"length" : 5,
+					"value" : null
+				},
+				"Maping" : {
+					"index" : 1,
+					"length" : 9,
+					"Min" : {
+						"range" : "from -2000 to 2000",
+						"value" : -2000,
+					},
+					"Max" : {
+						"range" : "from -2000 to 2000",
+						"value" : 2000,
+					}
+				}
+			]
+		},
+		
+		"Acce_Z" : {
+			"description" : "",
+			"attribute" : "data",
+			"index" : 3,
+			"value" : [
+				"Direct" : {
+					"index" : 0,
+					"length" : 5,
+					"value" : "none"
+				},
+				"Maping" : {
+					"index" : 1,
+					"length" : 9,
+					"Min" : {
+						"range" : "from -2000 to 2000",
+						"value" : -2000,
+					},
+					"Max" : {
+						"range" : "from -2000 to 2000",
+						"value" : 2000,
+					}
+				}
+			]
+		}
+	]
+}
